@@ -1,5 +1,33 @@
 # 📅 Calendar Agent: Your AI-Powered Work-Life Navigator
 
+```mermaid
+graph LR
+    User(["👤 User"]) <-->|"Natural Language\nRequests & Responses"| Claude["🧠 Claude AI\n(Assistant)"]
+    Claude <-->|"MCP Integration"| MCP["⚙️ Model Context\nProtocol (MCP)"]
+    MCP <-->|"API Calls"| Calendar["📅 Google Calendar"]
+
+    subgraph "Calendar Agent System"
+        Claude
+        MCP
+    end
+
+    subgraph "Organized Schedule"
+        Calendar --> MAIN["🏢 MAIN Projects\n(Primary Job)"]
+        Calendar --> SIDE["💼 SIDE Projects\n(Side Jobs)"]
+        Calendar --> PORT["🌟 PORT Projects\n(Portfolio)"]
+        Calendar --> BREAK["☕ Breaks &\nLunch"]
+    end
+
+    style User fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Claude fill:#5C4EE5,color:#fff,stroke:#333,stroke-width:2px
+    style MCP fill:#4CAF50,color:#fff,stroke:#333,stroke-width:2px
+    style Calendar fill:#4285F4,color:#fff,stroke:#333,stroke-width:2px
+    style MAIN fill:#DB4437,color:#fff,stroke:#333,stroke-width:1px
+    style SIDE fill:#F4B400,color:#fff,stroke:#333,stroke-width:1px
+    style PORT fill:#0F9D58,color:#fff,stroke:#333,stroke-width:1px
+    style BREAK fill:#9E9E9E,color:#fff,stroke:#333,stroke-width:1px
+```
+
 ## The Story Behind Calendar Agent
 
 In the chaos of modern work life, I found myself juggling multiple responsibilities: a demanding main job, exciting side projects, and the constant need to build my portfolio. My calendar became a battlefield of competing priorities, and I often felt like I was letting important tasks slip through the cracks.
